@@ -4,7 +4,7 @@ const routes = require("./routes"); // import routes
 
 const server = express(); //active server
 mongoose.connect(
-  "mongodb+srv://semana:semana@cluster0.15xkc.mongodb.net/omnistack8?retryWrites=true&w=majority",
+  ,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

@@ -1,6 +1,7 @@
 const express = require("express"); //import express
 const mongoose = require("mongoose"); // import mongoose to connect mongoDB with backend
 const routes = require("./routes"); // import routes
+const cors = require("cors");
 
 const server = express(); //active server
 mongoose.connect(
@@ -10,7 +11,7 @@ mongoose.connect(
     useUnifiedTopology: true,
   }
 ); // conect mongoDB Atlas with my backend
-
+server.use(cors());
 server.use(express.json()); // inform json on DevController.store
 server.use(routes); // routes is used on server
 
